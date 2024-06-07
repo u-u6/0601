@@ -111,3 +111,173 @@ select * from QANSWERS [42102-224]
 org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "SELECT q.QuestionContent, a.AnswerContent "" + ""FROM Questions q "" + ""LEFT JOIN Answers a ON q.QuestionID = a.QuestionID "" + ""ORDER BY q.CategoryID ASC, q.QuestionID ASC[*]"""
 Syntax error in SQL statement "SELECT q.QuestionContent, a.AnswerContent "" + ""FROM Questions q "" + ""LEFT JOIN Answers a ON q.QuestionID = a.QuestionID "" + ""ORDER BY q.CategoryID ASC, q.QuestionID ASC[*]"""; SQL statement:
 SELECT q.QuestionContent, a.AnswerContent " + "FROM Questions q " + "LEFT JOIN Answers a ON q.QuestionID = a.QuestionID " + "ORDER BY q.CategoryID ASC, q.QuestionID ASC" [42000-224]
+2024-06-05 15:42:37.246886+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "CATEDORIES" が見つかりません
+Table "CATEDORIES" not found; SQL statement:
+SELECT * from catedories [42102-224]
+2024-06-05 16:15:46.056312+09:00 jdbc[16]: exception
+org.h2.jdbc.JdbcSQLDataException: パラメータ "#1" がセットされていません
+Parameter "#1" is not set; SQL statement:
+SELECT q.QuestionContent, a.AnswerContent FROM Questions q LEFT JOIN Answers a ON q.QuestionID = a.QuestionID WHERE q.CategoryID = ? ORDER BY q.CategoryID ASC, q.QuestionID ASC [90012-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:207)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:251)
+	at org.h2.command.Command.executeQuery(Command.java:192)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:257)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-07 14:46:43.699637+09:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "([*]2,'交通費や昼食代は含まれますか？')"; 期待されるステートメント "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]2,'交通費や昼食代は含まれますか？')"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(2,'交通費や昼食代は含まれますか？') [42001-224]
+2024-06-07 14:46:43.714597+09:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "([*]3,'就労継続支援A型や就労移行支援の利用に関してはどのような手続きが必要ですか？')"; 期待されるステートメント "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]3,'就労継続支援A型や就労移行支援の利用に関してはどのような手続きが必要ですか？')"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(3,'就労継続支援A型や就労移行支援の利用に関してはどのような手続きが必要ですか？') [42001-224]
+2024-06-07 14:46:43.717590+09:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "([*]3,'利用期限はありますか？')"; 期待されるステートメント "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]3,'利用期限はありますか？')"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(3,'利用期限はありますか？') [42001-224]
+2024-06-07 14:46:43.721580+09:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "([*]3,'勤務時間、就労日数はどのくらいですか')"; 期待されるステートメント "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]3,'勤務時間、就労日数はどのくらいですか')"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(3,'勤務時間、就労日数はどのくらいですか') [42001-224]
+2024-06-07 14:46:43.723574+09:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "([*]4,'対象者や障がいの種類について教えてください')"; 期待されるステートメント "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]4,'対象者や障がいの種類について教えてください')"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(4,'対象者や障がいの種類について教えてください') [42001-224]
+2024-06-07 14:46:43.726570+09:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "([*]4,'利用できる対象地域はどこですか？')"; 期待されるステートメント "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]4,'利用できる対象地域はどこですか？')"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(4,'利用できる対象地域はどこですか？') [42001-224]
+2024-06-07 14:46:43.729557+09:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "([*]4,'障がい者手帳がなくても利用できますか？')"; 期待されるステートメント "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]4,'障がい者手帳がなくても利用できますか？')"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(4,'障がい者手帳がなくても利用できますか？') [42001-224]
+2024-06-07 14:46:43.731553+09:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "([*]4,'服装については決まりがありますか？')"; 期待されるステートメント "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]4,'服装については決まりがありますか？')"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(4,'服装については決まりがありますか？') [42001-224]
+2024-06-07 14:46:43.737536+09:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "([*]5,'利用を決めてからの手続きはどれぐらいかかりますか？')"; 期待されるステートメント "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]5,'利用を決めてからの手続きはどれぐらいかかりますか？')"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(5,'利用を決めてからの手続きはどれぐらいかかりますか？') [42001-224]
+2024-06-07 14:46:43.739532+09:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "([*]5,'面接にはどのようなものが必要ですか？')"; 期待されるステートメント "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]5,'面接にはどのようなものが必要ですか？')"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(5,'面接にはどのようなものが必要ですか？') [42001-224]
+2024-06-07 14:46:43.743521+09:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "([*]5,'事業所を利用するにあたって用意するものはありますか？')"; 期待されるステートメント "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]5,'事業所を利用するにあたって用意するものはありますか？')"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(5,'事業所を利用するにあたって用意するものはありますか？') [42001-224]
+2024-06-07 14:46:43.745516+09:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "([*]6,'就職後のサポートや相談はありますか？')"; 期待されるステートメント "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]6,'就職後のサポートや相談はありますか？')"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(6,'就職後のサポートや相談はありますか？') [42001-224]
+2024-06-07 14:46:43.746512+09:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "([*]6,'コミュニケーションや体調が不安です。')"; 期待されるステートメント "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]6,'コミュニケーションや体調が不安です。')"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(6,'コミュニケーションや体調が不安です。') [42001-224]
+2024-06-07 14:48:26.719301+09:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "([*]2,'交通費や昼食代は含まれますか？')"; 期待されるステートメント "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]2,'交通費や昼食代は含まれますか？')"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(2,'交通費や昼食代は含まれますか？') [42001-224]
+2024-06-07 14:48:26.723289+09:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "([*]3,'就労継続支援A型や就労移行支援の利用に関してはどのような手続きが必要ですか？')"; 期待されるステートメント "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]3,'就労継続支援A型や就労移行支援の利用に関してはどのような手続きが必要ですか？')"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(3,'就労継続支援A型や就労移行支援の利用に関してはどのような手続きが必要ですか？') [42001-224]
+2024-06-07 14:48:26.727278+09:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "([*]3,'利用期限はありますか？')"; 期待されるステートメント "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]3,'利用期限はありますか？')"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(3,'利用期限はありますか？') [42001-224]
+2024-06-07 14:48:26.728277+09:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "([*]3,'勤務時間、就労日数はどのくらいですか')"; 期待されるステートメント "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]3,'勤務時間、就労日数はどのくらいですか')"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(3,'勤務時間、就労日数はどのくらいですか') [42001-224]
+2024-06-07 14:48:26.730271+09:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "([*]4,'対象者や障がいの種類について教えてください')"; 期待されるステートメント "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]4,'対象者や障がいの種類について教えてください')"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(4,'対象者や障がいの種類について教えてください') [42001-224]
+2024-06-07 14:48:26.732266+09:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "([*]4,'利用できる対象地域はどこですか？')"; 期待されるステートメント "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]4,'利用できる対象地域はどこですか？')"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(4,'利用できる対象地域はどこですか？') [42001-224]
+2024-06-07 14:48:26.735258+09:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "([*]4,'障がい者手帳がなくても利用できますか？')"; 期待されるステートメント "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]4,'障がい者手帳がなくても利用できますか？')"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(4,'障がい者手帳がなくても利用できますか？') [42001-224]
+2024-06-07 14:48:26.736256+09:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "([*]4,'服装については決まりがありますか？')"; 期待されるステートメント "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]4,'服装については決まりがありますか？')"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(4,'服装については決まりがありますか？') [42001-224]
+2024-06-07 14:48:26.740245+09:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "([*]5,'利用を決めてからの手続きはどれぐらいかかりますか？')"; 期待されるステートメント "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]5,'利用を決めてからの手続きはどれぐらいかかりますか？')"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(5,'利用を決めてからの手続きはどれぐらいかかりますか？') [42001-224]
+2024-06-07 14:48:26.742238+09:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "([*]5,'面接にはどのようなものが必要ですか？')"; 期待されるステートメント "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]5,'面接にはどのようなものが必要ですか？')"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(5,'面接にはどのようなものが必要ですか？') [42001-224]
+2024-06-07 14:48:26.744235+09:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "([*]5,'事業所を利用するにあたって用意するものはありますか？')"; 期待されるステートメント "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]5,'事業所を利用するにあたって用意するものはありますか？')"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(5,'事業所を利用するにあたって用意するものはありますか？') [42001-224]
+2024-06-07 14:48:26.747226+09:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "([*]6,'就職後のサポートや相談はありますか？')"; 期待されるステートメント "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]6,'就職後のサポートや相談はありますか？')"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(6,'就職後のサポートや相談はありますか？') [42001-224]
+2024-06-07 14:48:26.749220+09:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "([*]6,'コミュニケーションや体調が不安です。')"; 期待されるステートメント "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]6,'コミュニケーションや体調が不安です。')"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(6,'コミュニケーションや体調が不安です。') [42001-224]
+2024-06-07 14:49:30.676963+09:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: "CONSTRAINT_3B" が依存しているため、"CATEGORIES" をドロップすることはできません
+Cannot drop "CATEGORIES" because "CONSTRAINT_3B" depends on it; SQL statement:
+drop table categories [90107-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.command.ddl.DropTable.prepareDrop(DropTable.java:108)
+	at org.h2.command.ddl.DropTable.update(DropTable.java:133)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-07 15:54:13.131887+09:00 jdbc[185]: null
+org.h2.message.DbException: アプリケーションにより閉じられていない接続がガベージコレクトされました
+The connection was not closed by the application and is garbage collected [90018-224]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:218)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:135)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:811)
+	at org.h2.server.web.WebApp.login(WebApp.java:1039)
+	at org.h2.server.web.WebApp.process(WebApp.java:227)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:177)
+	at org.h2.server.web.WebThread.process(WebThread.java:154)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: アプリケーションにより閉じられていない接続がガベージコレクトされました
+The connection was not closed by the application and is garbage collected [90018-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 13 more
