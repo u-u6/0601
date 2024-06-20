@@ -30,30 +30,31 @@
 ## ディレクトリ構造
 /Jobridge
 ├── src/main/java
-│ ├── dao
-│ │ └── QAListDAO.java
-│ ├── model
-│ │ ├── Answers.java
-│ │ ├── QA.java
-│ │ └── QACategory.java
-│ └── servlet
-│ └── SearchServlet.java
+│   ├── dao
+│   │   └── QAListDAO.java
+│   ├── model
+│   │   ├── Answers.java
+│   │   ├── QA.java
+│   │   └── QACategory.java
+│   └── servlet
+│       └── SearchServlet.java
 ├── src/main/webapp
-│ ├── CSS
-│ │ └── style.css
-│ ├── img
-│ │ ├── フッターイメージ画像.png
-│ │ └── ヘッダーイメージ画像.png
-│ ├── META-INF
-│ │ └── MANIFEST.MF
-│ ├── WEB-INF
-│ │ └── lib
-│ │ ├── h2-2.2.224.jar
-│ │ ├── jstl-api-1.2.jar
-│ │ └── jstl-impl-1.2.jar
-│ ├── noResult.jsp
-│ └── qaList.jsp
+│   ├── CSS
+│   │   └── style.css
+│   ├── img
+│   │   ├── フッターイメージ画像.png
+│   │   └── ヘッダーイメージ画像.png
+│   ├── META-INF
+│   │   └── MANIFEST.MF
+│   ├── WEB-INF
+│   │   └── lib
+│   │       ├── h2-2.2.224.jar
+│   │       ├── jstl-api-1.2.jar
+│   │       └── jstl-impl-1.2.jar
+│   ├── noResult.jsp
+│   └── qaList.jsp
 └── build
+
 
 
 ## インストールと使い方
