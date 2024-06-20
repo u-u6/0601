@@ -26,3 +26,73 @@
 
 - **その他**
   - `企業実習企画書兼タイムラインURL.txt`: 制作の経過とタイムラインを記録したテキストファイル。
+ 
+## ディレクトリ構造
+/Jobridge
+├── src/main/java
+│ ├── dao
+│ │ └── QAListDAO.java
+│ ├── model
+│ │ ├── Answers.java
+│ │ ├── QA.java
+│ │ └── QACategory.java
+│ └── servlet
+│ └── SearchServlet.java
+├── src/main/webapp
+│ ├── CSS
+│ │ └── style.css
+│ ├── img
+│ │ ├── フッターイメージ画像.png
+│ │ └── ヘッダーイメージ画像.png
+│ ├── META-INF
+│ │ └── MANIFEST.MF
+│ ├── WEB-INF
+│ │ └── lib
+│ │ ├── h2-2.2.224.jar
+│ │ ├── jstl-api-1.2.jar
+│ │ └── jstl-impl-1.2.jar
+│ ├── noResult.jsp
+│ └── qaList.jsp
+└── build
+
+
+## インストールと使い方
+
+### サーブレットの実行手順
+
+1. **プロジェクトのビルド**
+
+   - このプロジェクトはJavaで構築されています。まず、適切な開発環境（例：Eclipse、IntelliJ IDEAなど）でプロジェクトを開きます。
+
+2. **依存ライブラリの設定**
+
+   - `src/main/webapp/WEB-INF/lib` ディレクトリに以下の依存ライブラリが必要です：
+     - `h2-2.2.224.jar`
+     - `jstl-api-1.2.jar`
+     - `jstl-impl-1.2.jar`
+
+   - プロジェクトのビルドパスにこれらのJARファイルを追加してください。
+
+3. **サーブレットの設定**
+
+   - `SearchServlet.java` は `src/main/java/servlet` ディレクトリにあります。サーブレットを適切に設定し、必要に応じて `web.xml` にマッピングしてください。
+
+4. **サーバーでの実行**
+
+   - サーブレットコンテナ（例：Tomcat）にWARファイルをデプロイし、サーバーを起動します。
+   - サーブレットへのアクセスURLは、例えば `http://localhost:8080/Jobridge/SearchServlet` のようになります（ポート番号やパスは環境により異なります）。
+
+5. **動作確認**
+
+   - ブラウザでアクセスして、検索機能が正常に動作することを確認してください。
+
+## その他のファイル
+
+- `noResult.jsp`: 検索結果がない場合に表示するページ。
+- `qaList.jsp`: QAリストを表示するページ。
+
+
+
+
+
+
