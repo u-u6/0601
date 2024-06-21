@@ -20,6 +20,7 @@
   - HTML
   - CSS
   - H2Database
+  - Tomcat9_Java17
 
 <br>
 
@@ -96,18 +97,22 @@
      - `jstl-api-1.2.jar`
      - `jstl-impl-1.2.jar`
 
-   - プロジェクトのビルドパスにこれらのJARファイルを追加してください。
+   - プロジェクトのビルドパスにこれらのJARファイルを追加してください。 
 
-3. **サーブレットの設定**
+3. **データベースの設定**
+
+    - `jdbc:h2:~/jobridge`に接続します
+
+5. **サーブレットの設定**
 
    - `SearchServlet.java` は `src/main/java/servlet` ディレクトリにあります。
 
-4. **サーバーでの実行**
+6. **サーバーでの実行**
 
    - `SearchServlet.java` を `Tomcat9_Java17`で起動します。
    - サーブレットへのアクセスURLは、例えば `http://localhost:8080/Jobridge/SearchServlet` のようになります（ポート番号やパスは環境により異なります）。
 
-5. **動作確認**
+7. **動作確認**
 
    - ブラウザでアクセスして、検索機能などが正常に動作することを確認してください。
 
