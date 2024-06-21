@@ -22,7 +22,7 @@
   - HTML
   - CSS
   - H2Database
-  - Tomcat9_Java17
+  - Apache Tomcat (Tomcat9_Java17)
 
 <br>
 
