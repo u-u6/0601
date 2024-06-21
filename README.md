@@ -63,7 +63,7 @@
 
 1. **プロジェクトのビルド**
 
-   - このプロジェクトはJavaで構築されています。まず、適切な開発環境（例：Eclipse、IntelliJ IDEAなど）でプロジェクトを開きます。
+   - Javaで構築されています。まず、Eclipseでプロジェクトを開きます。
 
 2. **依存ライブラリの設定**
 
@@ -76,7 +76,7 @@
 
 3. **サーブレットの設定**
 
-   - `SearchServlet.java` は `src/main/java/servlet` ディレクトリにあります。サーブレットを適切に設定し、必要に応じて `web.xml` にマッピングしてください。
+   - `SearchServlet.java` は `src/main/java/servlet` ディレクトリにあります。
 
 4. **サーバーでの実行**
 
